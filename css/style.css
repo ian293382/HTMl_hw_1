@@ -275,9 +275,10 @@ a{
 .front_end_skill_main .front_end_skills_service{
 	font-size: 28px;
 	line-height: 35px;
-	font-weight: 600;
+	font-weight: 700;
 	color: #fff;
 }
+
 
 .headline-box-border-grey{
 	background: #353535;
@@ -356,6 +357,123 @@ clear: both;
 	line-height: 35px;
 	padding-right: 60px;
 }
+
+/* back_end_page */
+
+.back_end_skill_main .container{
+	padding: 60px ;
+}
+
+.back_end_skill_main .hero{
+	height: 231px;
+	width: 100%;
+	background-color: #242424;
+	display: flex; /* 將元素設置為 flex 容器 */
+	/* justify-content: center; 水平置中 */
+	align-items: center; /* 垂直置中 */
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+}
+
+.back_end_skill_main .back_end_title{
+	color: #fff;
+	margin: 0;
+	font-size: 55px;
+	font-weight: 700;
+	line-height: 35px;
+	padding-right: 60px;
+}
+
+.back_end_skill_main .back_end_title{
+	color: #fff;
+	margin: 0;
+	font-size: 55px;
+	font-weight: 700;
+	line-height: 35px;
+	padding-right: 60px;
+}
+
+.back_end_skill_main .back_end_skills_service{
+	font-size: 28px;
+	line-height: 35px;
+	font-weight: 700;
+	color: #fff;
+}
+
+
+.back_end_skill_main .back_end_skills_service{
+	font-size: 28px;
+	line-height: 35px;
+	font-weight: 700;
+	color: #fff;
+}
+
+
+/* back-descript-group */
+.back-wrapper{
+  width: 100%;
+  overflow: hidden;
+  padding-top: 22px;
+	/* margin-bottom: 45px; */
+}
+
+.back-wrapper:after{
+content: '';
+display: block;
+clear: both;
+}
+
+.back-wrapper .back-image{
+  float: left;
+  margin-right: 20px;
+
+}
+
+@media screen and (max-width: 768px) {
+  .back-text-group {
+    margin-left: 100px; /* 在較小的螢幕上縮小距離 */
+  }
+}
+
+.back-wrapper .back-text-group{
+	overflow: hidden;
+	display: block;
+  margin-left: 26px; /* 調整此處來決定兩個元素之間的距離 */
+	margin-right: 20px;
+}
+
+.back-wrapper .back_name{
+  color: #fff;
+	display: inline-block;
+	margin: 5 auto;
+  line-height: 35px;
+  margin-bottom: 10px;
+	font-weight: 700;
+	font-size: 18px;
+	vertical-align: top;
+
+}
+
+.back-wrapper .back_descript{
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: 400;
+	text-align: left;
+	display: flex;
+  justify-content: space-between;
+	margin-bottom: 45px
+}
+
+.back_end_skills_service{
+	color: #fff;
+	margin: 0;
+	font-size: 55px;
+	font-weight: 700;
+	line-height: 35px;
+	padding-right: 60px;
+}
+
 
 /* skillbar-box-name */
 .skillbar-group {
