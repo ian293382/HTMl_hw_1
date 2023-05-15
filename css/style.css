@@ -60,9 +60,11 @@ a{
 	padding-left: 16px;
 	padding-right: 20px;
 }
+
 .col-3{
 	width: 25%;
 }
+
 .col-4{
 	width: 33.3333333%;
 }
@@ -117,9 +119,11 @@ a{
 .main-preview .btn-group{
 	margin-left: 12px;
 }
+
 .main-preview .btn-group .btn{
 	margin-right: 15px;
 }
+
 .main-preview .btn-primary{
 	background-color: #333;
 	border: 3px solid #007CED;
@@ -146,7 +150,6 @@ a{
 
 	display: flex;
   align-items: center;
-
 }
 
 .navbar .brand{
@@ -168,6 +171,7 @@ a{
 	float: right;
 	flex-grow: 1;
 }
+
 .navbar .nav .nav-item{
 	float: left;
 }
@@ -207,7 +211,6 @@ a{
   flex: 1;
   width: auto;
 }
-
 
 .image-container{
 	float: left;
@@ -279,13 +282,13 @@ a{
 	color: #fff;
 }
 
-
 .headline-box-border-grey{
 	background: #353535;
 	height: 2px;
 	margin-top: 5px;
 	width: 110px;
 }
+
 .headline-box-border-blue{
 	background: #007CED;
 	height: 2px;
@@ -335,7 +338,6 @@ clear: both;
 	font-weight: 700;
 	font-size: 18px;
 	vertical-align: top;
-
 }
 
 .front-wrapper .front_descript{
@@ -359,7 +361,6 @@ clear: both;
 }
 
 /* back_end_page */
-
 .back_end_skill_main .container{
 	padding: 60px ;
 }
@@ -400,14 +401,12 @@ clear: both;
 	color: #fff;
 }
 
-
 .back_end_skill_main .back_end_skills_service{
 	font-size: 28px;
 	line-height: 35px;
 	font-weight: 700;
 	color: #fff;
 }
-
 
 /* back-descript-group */
 .back-wrapper{
@@ -451,7 +450,6 @@ clear: both;
 	font-weight: 700;
 	font-size: 18px;
 	vertical-align: top;
-
 }
 
 .back-wrapper .back_descript{
@@ -473,7 +471,6 @@ clear: both;
 	line-height: 35px;
 	padding-right: 60px;
 }
-
 
 /* skillbar-box-name */
 .skillbar-group {
@@ -567,4 +564,3 @@ clear: both;
   font-weight: 400;
   line-height: 35px;
 }
-No newline at end of file
