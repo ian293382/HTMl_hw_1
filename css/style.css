@@ -14,6 +14,7 @@ h1,h2,h3,h4,h5,h6,p{
 	margin: 0;
 }
 
+
 ul{
 	margin: 0;
 	padding: 0;
@@ -28,6 +29,9 @@ a{
 /* layout */
 
 .navbar .container{
+	display: flex;
+  align-items: center;
+  justify-content: space-between;
 	max-width: 1800px;
 	width: 100%;
 	height: 121px;
@@ -154,22 +158,43 @@ a{
 
 .navbar .brand{
 	display: inline-block;
-	vertical-align: middle;
-	width: 177px;
-	height: 111px;
+	vertical-align: left;
+	/* margin-top: 46px; */
+	width: 55px;
+	height: 55px;
 	background-image: url('../images/nav_brand.png');
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	margin-right: 8px;
 
-	white-space: nowrap;
+	/* white-space: nowrap;
 	text-indent: 100%;
-	overflow: hidden;
+	overflow: hidden; */
+}
+.navbar .navbar_brand_group {
+  display: flex;
+	flex-grow: 1;
+  align-items: center; /* 将内容垂直居中 */
+  width: 20%;
+}
+
+.navbar .project_title{
+	font-family: 'Poppins';
+	font-weight: 400;
+	color: #fff;
+}
+
+.navbar .project_title span{
+	font-family: 'Poppins';
+	color:#fff;
+  font-weight: bold;
 }
 
 .navbar .nav{
 	float: right;
 	flex-grow: 1;
+
 }
 
 .navbar .nav .nav-item{
@@ -286,7 +311,7 @@ a{
 	background: #353535;
 	height: 2px;
 	margin-top: 5px;
-	width: 110px;
+	width: 127px;
 }
 
 .headline-box-border-blue{
@@ -383,22 +408,6 @@ clear: both;
 	font-weight: 700;
 	line-height: 35px;
 	padding-right: 60px;
-}
-
-.back_end_skill_main .back_end_title{
-	color: #fff;
-	margin: 0;
-	font-size: 55px;
-	font-weight: 700;
-	line-height: 35px;
-	padding-right: 60px;
-}
-
-.back_end_skill_main .back_end_skills_service{
-	font-size: 28px;
-	line-height: 35px;
-	font-weight: 700;
-	color: #fff;
 }
 
 .back_end_skill_main .back_end_skills_service{
@@ -530,6 +539,118 @@ clear: both;
   background-color: #007ced;
 }
 
+/* Portfolio Page */
+.portfolio_main .container{
+	/* 與上方logo對準60px */
+	padding-left: 60px ;
+}
+
+
+.portfolio_main .hero{
+	height: 231px;
+	width: 100%;
+	background-color: #242424;
+	display: flex; /* 將元素設置為 flex 容器 */
+	/* justify-content: center; 水平置中 */
+	align-items: center; /* 垂直置中 */
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+}
+
+.portfolio_main .portfolio_title{
+	color: #fff;
+	margin: 0;
+	font-size: 55px;
+	font-weight: 700;
+	line-height: 35px;
+	padding-right: 60px;
+}
+
+.portfolio_wrapper{
+	width: 100%;
+  overflow: hidden;
+  /* container padding為 60px 總共123px */
+	padding-left: 63px;
+}
+
+.portfolio_subtitle{
+	color: #fff;
+	margin-top: 49px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 35px;
+	padding-right: 60px;
+}
+
+.klienti_group{
+	padding-left: 443px;
+}
+
+.klienti_group .klienti_list {
+	/* 水平排列 */
+  display: flex;
+  justify-content: space-between;
+}
+
+.klienti_group .klienti_list .klienti-item{
+	font-size: 20px;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.5);
+	line-height: 35px;
+	margin-right: 207px;
+
+	/* 第二行間隔51px 本身Klienti為49px */
+	padding-bottom: 2px;
+}
+
+/* 設定粗體字 */
+.klienti-item strong{
+	font-weight: bold;
+}
+
+/* galerie_list */
+.galerie_list{
+
+	/* 水平排列 */
+	display: flex;
+}
+
+.portfolio_wrapper .galerie_list .galerie-item{
+	font-size: 18px;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.5);
+	line-height: 35px;
+	margin-right: 49px;
+}
+.portfolio_wrapper .galerie_list .galerie-item .nav-list:hover{
+	color: #fff;
+}
+
+.portfolio-group{
+	padding-top: 24px;
+	padding-left: 63px;
+	padding-bottom: 45px;
+}
+
+.portfolio-group .portfolio-list {
+	align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+}
+.portfolio-group .portfolio-list .portfolio-item img{
+	width: 475px;
+	height: 270px;
+	border-radius: 25px;
+  background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+
+/* footer */
 .footer{
 	align-items: center;
 }
