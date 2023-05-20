@@ -78,12 +78,63 @@ a{
   padding: 0 16px;
 }
 
+.col-8{
+	width: 66.666666%;
+}
 @media only screen and (max-width: 768px) {
   .col-6 {
     width: 100%;
     float: none;
   }
 }
+
+/* contact_row_grid */
+.container .col-60{
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+}
+
+.contact_row{
+	grid-gap:20px;
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+.contact_row_grid_1{
+	/* border: 2px solid #555; */
+	border-radius: 5px;
+	display: flex;
+	grid-column: 1;
+	grid-row: 1;
+	justify-content: flex-start;
+
+}
+
+.contact_row_grid_2{
+	/* border: 2px solid #555; */
+	border-radius: 5px;
+	display: flex;
+	grid-column: 1;
+	grid-row: 2;
+	justify-content: flex-start;
+
+}
+
+.contact_row_grid_3{
+	/* border: 2px solid #555; */
+	border-radius: 5px;
+	display: flex;
+	grid-column: 1;
+	grid-row: 3;
+	justify-content: flex-start;
+
+}
+
 
 /* component */
 .main-preview .name_title{
@@ -639,6 +690,7 @@ clear: both;
 	justify-content: space-between;
 	gap: 30px;
 }
+
 .portfolio-group .portfolio-list .portfolio-item img{
 	width: 475px;
 	height: 270px;
@@ -649,11 +701,178 @@ clear: both;
 	overflow: hidden;
 }
 
+/* contact page*/
+.contact_main .container{
+	/* 與上方logo對準60px */
+	padding-left: 60px ;
+}
+
+.contact_main .hero{
+	height: 231px;
+	width: 100%;
+	background-color: #242424;
+	display: flex; /* 將元素設置為 flex 容器 */
+	/* justify-content: center; 水平置中 */
+	align-items: center; /* 垂直置中 */
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+}
+
+.contact_main .contact_title{
+	color: #fff;
+	margin: 0;
+	font-size: 55px;
+	font-weight: 700;
+	line-height: 35px;
+	padding-left: 60px;
+}
+.contact_map {
+  top: 0;
+  left: 0;
+	margin-top: 29px;
+  padding: 29px 121px;
+  width: 1678px;
+  height: 146px;
+  background-size: cover;
+	display: flex;
+  align-items: center;
+	justify-content: center;
+  overflow: hidden;
+
+	margin-bottom: 39px;
+}
+
+.contact-wrapper{
+  width: 100%;
+  overflow: hidden;
+  padding-top: 22px;
+	/* margin-bottom: 45px; */
+}
+
+.contact-wrapper:after{
+content: '';
+display: block;
+clear: both;
+}
+
+.contact-wrapper .contact-image{
+  float: left;
+  margin-right: 20px;
+
+}
+
+@media screen and (max-width: 768px) {
+  .contact-text-group {
+    margin-left: 100px; /* 在較小的螢幕上縮小距離 */
+  }
+}
+
+.contact-wrapper .contact-text-group{
+	overflow: hidden;
+	display: block;
+  margin-left: 26px; /* 調整此處來決定兩個元素之間的距離 */
+	margin-right: 20px;
+}
+
+.contact-wrapper .contact_name{
+  color: #fff;
+	display: inline-block;
+	margin: 5 auto;
+  line-height: 35px;
+  margin-bottom: 10px;
+	font-weight: 700;
+	font-size: 20px;
+	vertical-align: top;
+}
+
+.contact-wrapper .contact_descript{
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 400;
+	text-align: left;
+	display: inline-block;
+  /* justify-content: space-between; */
+	margin-bottom: 45px
+}
+
+.contact_table_title{
+	vertical-align: top;
+  color: #fff;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 35px;
+	/* display: block; */
+}
+
+.input_group{
+	display: flex;
+	margin-top: 27px;
+	/* background-color: #252525;
+	color: #252525; */
+}
+
+.form_item input,
+.form_item select{
+	background-color: #252525; /* 设置所需的背景颜色 */
+	border: 2px solid #555555;
+	border-radius: 5px;
+
+	width: 500px;
+	height: 53px;
+}
+
+.form_item select{
+	color: #555;
+}
+
+.form_item-lg input[type="text"] {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #252525;
+  border: 2px solid #555555;
+  border-radius: 5px;
+  color: #fff;
+  line-height: 30px;
+  font-size: 14px;
+  writing-mode: horizontal-tb !important;
+  text-align: start;
+  white-space: pre-wrap;
+
+	border-radius: 5px;
+	display: flex;
+	grid-column: 2;
+	grid-row: 1/4;
+	justify-content: flex-start;
+	resize: none;
+
+}
+
+
+.form_item .contact_btn{
+	width: 161px;
+	height: 62px;
+	background: #333333;
+	border: 3px solid #007CED;
+	border-radius: 30px;
+
+	color: #fff;
+	font-size: 20px;
+	line-height: 35px;
+	font-weight: 400;
+	justify-content: flex-start;
+	margin-top: 10px;
+
+	cursor: pointer;
+}
 
 /* footer */
 .footer{
 	align-items: center;
 }
+
 .footer .container{
 	margin: 0 60px;
 	height: 68px;
