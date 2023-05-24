@@ -600,6 +600,12 @@ clear: both;
 	padding-left: 60px ;
 }
 
+.portfolio_main{
+	min-height: 100vh;
+
+	overflow-x: hidden;
+}
+
 
 .portfolio_main .hero{
 	height: 231px;
@@ -638,8 +644,26 @@ clear: both;
 }
 
 .klienti_group{
-	padding-left: 443px;
+	margin-left: 443px;
+	/* padding-left: auto; */
+	width: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+
 }
+@media screen and (max-width: 768px) {
+  .klienti_group {
+    padding-left: 0; /* 移除左邊間距 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+		flex: auto;
+
+  }
+}
+
 
 .klienti_group .klienti_list {
 	/* 水平排列 */
