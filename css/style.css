@@ -88,11 +88,12 @@ a{
   }
 }
 
-/* contact_row_grid */
+/* contact_row_grid for contact*/
 .container .col-60{
 	display: flex;
 	flex-direction: column;
 	width: 60%;
+	padding-left: 6.66666%;
 }
 
 .contact_row{
