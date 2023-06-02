@@ -26,6 +26,28 @@ a{
 	color: rgba(255, 255, 255, 0.5);
 }
 
+
+/* form_icon_img  */
+
+
+.icon-img select{
+	/* 取消選曲 */
+	display: none;
+}
+
+.icon-img{
+  position: absolute;
+	right: 1%;
+	/* 垂直中央 */
+  top: 50%;
+  transform: translateY(-50%);
+	z-index: 200;
+	/* 禁止訪問指標 */
+	cursor: pointer;
+	pointer-events: none;
+	opacity: 1;
+}
+
 /* layout */
 
 .navbar .container{
