@@ -386,8 +386,10 @@ a{
 	/* 修正圖片不破壞比例 */
 	background-size: contain;
 	background-position: center;
-	max-width: 100%;
-	max-height: 60%;
+
+	min-height: 100%;
+	object-fit: contain;
+	overflow: clip;
 }
 .main .main-preview{
 	padding-left: 80px;
@@ -404,15 +406,13 @@ a{
   .image-container {
     width: 100%;
     max-height: 100%;
+
 	}
 
 	.image{
 		width:100%;
 		margin: 0 auto;
-
 	}
-
-
 
   .main-preview {
     display: flex;
@@ -424,12 +424,13 @@ a{
   }
 
   .main-preview .name_title {
-    display: flex;
-    justify-content: top;
-		flex-grow: 0.5;
-		/* 不換行 */
-    white-space: nowrap;
-    margin: 50% auto;
+		display: flex;
+		justify-content: center;
+		align-items: center; /* 垂直居中对齐 */
+		text-align: center;
+		flex-grow: 1; /* 增加伸缩比例以占用剩余空间 */
+		white-space: nowrap;
+		margin: 0 auto;
   }
 
   .main-preview .title {
@@ -447,7 +448,6 @@ a{
 		min-width: 60vh;
 
   }
-
 }
 
 /* .front_end_title */
