@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
   <title>DevRos - Web developer</title>
 </head>
+
 <body>
   <!-- start navbar -->
   <div class="wrapper">
@@ -19,7 +21,13 @@
             </a>
             <h1 class="project_title"><span>Dev</span>Ros</h1>
           </div>
-          <ul class="nav">
+
+          <ul id="popup-menu" class="nav">
+            <li>
+              <a href="#!" class="close-btn">
+                <img src="images/close.png" alt="Close">
+              </a>
+            </li>
             <li class="nav-item">
               <a href="index.html" class="nav-list">Domů</a>
             </li>
@@ -35,53 +43,59 @@
             <li class="nav-item">
               <a href="#!" class="nav-list">Kontakt</a>
             </li>
-
           </ul>
+
+          <a href="#popup-menu" class="menu-toggle">
+            <img src="images/dropdown.png" alt="popup-menu">
+          </a>
+
         </div>
       </div>
     </div>
-      <!-- end navbar -->
+    <!-- end navbar -->
 
     <!-- Start main  -->
-  <section class="main">
+    <section class="main">
+      <div class="container">
+        <div class="image-container">
+          <div class="image" style="background-image: url('images/main_image001.svg');">
+          </div>
+        </div>
+        <div class="main-preview">
+          <h3 class="name_title">Full Stack Developer</h3>
+          <h1 class="title">DevRos</h1>
+          <p class="descript">Potřebujete vytvořit webové stránky ? Dohlížím na design od návrhu až po realizaci.
+            Technickou stránku webu zajistišťuji tak, aby všechno běželo přesně jak má. Kdyby Vás portfolio zaujalo -
+            napište mi !</p>
+          <div class="btn-group btn-group-center">
+            <a href="#!" class="btn btn-primary">Portifolio</a>
+            <a href="#!" class="btn btn-normal">Kontakt</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- end main  -->
+
+  </div>
+
+
+  <footer class="footer">
     <div class="container">
-      <div class="image-container">
-        <div class="image" style="background-image: url('images/main_image001.svg');">
-        </div>
-      </div>
-      <div class="main-preview">
-        <h3 class="name_title">Full Stack Developer</h3>
-        <h1 class="title">DevRos</h1>
-        <p class="descript">Potřebujete vytvořit webové stránky ? Dohlížím na design od návrhu až po realizaci. Technickou stránku webu zajistišťuji tak, aby všechno běželo přesně jak má. Kdyby Vás portfolio zaujalo - napište mi !</p>
-        <div class="btn-group btn-group-center">
-          <a href="#!" class="btn btn-primary">Portifolio</a>
-          <a href="#!" class="btn btn-normal">Kontakt</a>
-        </div>
-      </div>
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="#!" class="nav-list">Facebook</a>
+        </li>
+        <li class="nav-item">
+          <a href="#!" class="nav-list">Instagram</a>
+        </li>
+        <li class="nav-item">
+          <a href="#!" class="nav-list">Youtube</a>
+        </li>
+      </ul>
+      <p class="footer">© 2022 Všechna práva vyhrazena.</p>
     </div>
-
-  </section>
-   <!-- end main  -->
-
-  </div>
-
-
- <footer class="footer">
-  <div class="container">
-    <ul class="nav">
-      <li class="nav-item">
-        <a href="#!" class="nav-list">Facebook</a>
-      </li>
-      <li class="nav-item">
-        <a href="#!" class="nav-list">Instagram</a>
-      </li>
-      <li class="nav-item">
-        <a href="#!" class="nav-list">Youtube</a>
-      </li>
-    </ul>
-    <p class="footer">© 2022 Všechna práva vyhrazena.</p>
-  </div>
-</footer>
+  </footer>
 
 </body>
 
