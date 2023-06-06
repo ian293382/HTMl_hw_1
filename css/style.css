@@ -151,8 +151,10 @@ a{
 		width: 50%;
 	}
 	.col-md-12{
-		float: center;
-		width: 100%;
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+		width:100%
 	}
 }
 
@@ -587,7 +589,7 @@ a{
 		display: flex;
     justify-content: center;
     text-align: justify;
-		margin: 30% auto;
+		margin: 0 auto;
 		min-width: 60vh;
 		margin-bottom: -20px;
   }
@@ -601,6 +603,9 @@ a{
 @media screen and (max-width: 768px) {
 	.front_end_skill_main .container{
 		padding: 24px ;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 }
 
@@ -617,9 +622,23 @@ a{
 
 @media screen and (max-width: 768px) {
 	.front_end_skill_main .hero{
-		height: 120px;
+		height: 140px;
+		width: 100%;
+		display: flex;
+    justify-content: center;
+    text-align: justify;
+		margin: 0 auto;
+		margin-bottom: 0;
+
+  }
+	.front_end_skill_main .row{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
 	}
 }
+
 
 .front_end_skill_main .front_end_title{
 	color: #fff;
@@ -682,11 +701,6 @@ clear: both;
 
 }
 
-@media screen and (max-width: 768px) {
-
-
-}
-
 .front-wrapper .front-text-group{
 	overflow: hidden;
 	display: block;
@@ -723,6 +737,27 @@ clear: both;
 	font-weight: 700;
 	line-height: 35px;
 	padding-right: 60px;
+}
+
+@media screen and (max-width: 768px) {
+
+	.headline-box-group{
+		/* 將那些選項至於中央 */
+		margin: 0 auto;
+
+	}
+
+	.front-wrapper .front_descript{
+		display: flex;
+		flex: 1;
+		text-align: left;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+
+	.front_end_skills_service{
+		padding-right: 20px;
+	}
 }
 
 /* back_end_page */
