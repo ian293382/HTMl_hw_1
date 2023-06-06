@@ -14,7 +14,6 @@ h1,h2,h3,h4,h5,h6,p{
 	margin: 0;
 }
 
-
 ul{
 	margin: 0;
 	padding: 0;
@@ -105,7 +104,6 @@ a{
   flex-wrap: wrap;
   margin: 0 -16px;
 }
-
 
 @media screen and (max-width:768px) {
 	.row{
@@ -472,7 +470,8 @@ a{
 }
 @media screen and (max-width: 1080px){
 	.navbar .menu-toggle{
-		display: inline-block;
+		display: flex;
+		height: 5vh;
 	}
 }
 
@@ -561,7 +560,7 @@ a{
   .main-preview {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 		padding-top: -30px;
 
@@ -570,9 +569,9 @@ a{
   .main-preview .name_title {
 		display: flex;
 		justify-content: center;
-		align-items: center; /* 垂直居中对齐 */
+		align-items: center; /* 垂直居中 */
 		text-align: center;
-		flex-grow: 1; /* 增加伸缩比例以占用剩余空间 */
+		flex-grow: 1; /* 增加伸縮比例所佔用空間 */
 		white-space: nowrap;
 		margin: 0 auto;
   }
@@ -581,16 +580,16 @@ a{
 		display: flex;
 		flex: 0.5;
     text-align: center;
-    margin: 50% auto;
+    margin: 40px auto;
   }
 
   .main-preview .descript {
 		display: flex;
-    justify-content: left;
-    text-align: inherit;
-		margin: 50% auto;
+    justify-content: center;
+    text-align: justify;
+		margin: 30% auto;
 		min-width: 60vh;
-
+		margin-bottom: -20px;
   }
 }
 
@@ -616,6 +615,12 @@ a{
 	border-bottom: 2px solid #333;
 }
 
+@media screen and (max-width: 768px) {
+	.front_end_skill_main .hero{
+		height: 120px;
+	}
+}
+
 .front_end_skill_main .front_end_title{
 	color: #fff;
 	margin: 0;
@@ -627,11 +632,12 @@ a{
 
 @media screen and (max-width:768px) {
 	.front_end_skill_main .front_end_title{
-    display: block;
+    display: flex;
     justify-content: center;
     text-align: center;
 		align-items: center;
-		padding-right: 20px !important ;
+		margin: 0 auto;
+		padding-right: 0;
 	}
 }
 
