@@ -105,18 +105,18 @@ a{
   margin: 0 -16px;
 }
 
-@media screen and (max-width:768px) {
+.row:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+@media screen and (max-width: 1080px) {
 	.row{
 		display: flex;
 		flex-wrap: nowrap;
 		margin: 0 auto;
 	}
-}
-
-.row:after{
-	content: '';
-	display: block;
-	clear: both;
 }
 
 .col-lg-6,.col-lg-4,.col-lg-3,.col-lg-12,
@@ -140,7 +140,7 @@ a{
 	width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
 	.col-md-3{
 		width: 25%;
 	}
@@ -151,14 +151,14 @@ a{
 		width: 50%;
 	}
 	.col-md-12{
-		display: flex;
+		/* display: flex;
 		flex-direction: column;
-		flex-basis: 100%;
+		flex-basis: 100%; */
 		width:100%
 	}
 }
 
-@media screen and (max-width:540px) {
+@media screen and (max-width: 768px) {
 	.col-sm-3{
 		width: 25%;
 	}
@@ -169,8 +169,7 @@ a{
 		width: 50%;
 	}
 	.col-sm-12{
-		width: 100%;
-		float: center;
+		width: 96%;
 	}
 }
 
@@ -258,8 +257,8 @@ a{
     align-items: center;
     flex-wrap: wrap;
     width: auto;
-    margin: 0 auto;
-    transform: translate(50%, 50%);
+		/* 水平中央 */
+    margin: auto 0 ;
     margin-top: -30px;
   }
 
@@ -345,11 +344,6 @@ a{
   font-weight: bold;
 }
 
-@media screen and (max-width:540px) {
-	.navbar .project_title{
-		display: none;
-	}
-}
 
 .navbar .nav{
 	float: right;
@@ -358,6 +352,13 @@ a{
 
 .navbar .nav .nav-item{
 	float: left;
+}
+
+@media screen and (max-width: 1080px) {
+	.navbar .nav .nav-item{
+		float: none;
+		clear: both;
+	}
 }
 
 .navbar .nav .nav-list{
@@ -376,11 +377,13 @@ a{
 }
 
 @media screen and (max-width: 1080px) {
-  .close-btn {
-    display: inline-block;
-    vertical-align: bottom;
-    justify-content: center;
-  }
+	.navbar .nav .nav-list{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: auto;
+		text-align: center;
+	}
 }
 
 /* popup-menu */
@@ -405,6 +408,7 @@ a{
 /* navbar close-btn */
 .navbar .close-btn {
   display: none;
+
   width: 48px;
   height: 48px;
 }
@@ -439,16 +443,24 @@ a{
 		visibility: visible;
 	}
 
+	#popup-menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#popup-menu li {
+		width: auto;
+		text-align: center;
+	}
+
 
   .navbar .close-btn {
-    display: block;
-
-		text-align: right;
-		justify-content: right;
-		cursor: pointer;
-		position: fixed;
-		right: 5%;
-		top: 5%;
+		display: flex;
+    cursor: pointer;
+    position: fixed;
+    right: 16px;
+    top: 8px;
 	}
 
 	#popup-menu .nav .nav-item {
@@ -467,13 +479,21 @@ a{
 	height: 48px;
 	/*border: 1px solid #fff;*/
 	float: right;
-	margin-top: 8px;
 	display: none;
 }
 @media screen and (max-width: 1080px){
 	.navbar .menu-toggle{
 		display: flex;
-		height: 5vh;
+		margin: auto 0;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.navbar .menu-toggle{
+		display: flex;
+		position: fixed;
+		top: 30px;
+		right: 5%;
 	}
 }
 
@@ -504,67 +524,74 @@ a{
 	flex-direction: row;
 }
 
-
-
 .image-container{
 	float: left;
-	width: 25%;
-	max-height: 60%;
+	width: 100%;
+	/* max-height: 60%; */
 	vertical-align: center;
 }
-
 
 .image-container:before{
 	content: '';
 	display: block;
-	width: 50%;
-	padding-top: 50%;
 }
+
 
 .image-container .image{
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
-  height: 60%;
+	padding-top: 100%;
 	background-repeat: no-repeat;
 	/* 修正圖片不破壞比例 */
 	background-size: contain;
 	background-position: center;
 
-	min-height: 100%;
 	object-fit: contain;
 	overflow: clip;
 }
 .main .main-preview{
-	padding-left: 80px;
-	padding-right: 272px;
-	width: 75%;
+	width: auto;
 	float: right;
+	margin: -60px auto;
+	width: 75%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   .main .container {
     flex-direction: column;
+
+		max-width: 100%;
+		margin: 0 auto ;
   }
 
   .image-container {
-    width: 100%;
-    max-height: 100%;
-
+		float: none;
+		clear: both;
+		display: inline-flex;
+		flex-direction: column;
+    width:100%;
+		flex-basis: 100%;
 	}
 
-	.image{
-		width:100%;
+	.image-container .image{
+		/* width:100%; */
+
 		margin: 0 auto;
+		padding-top: 50%;
+		max-height: 100%;
 	}
 
-  .main-preview {
-    display: flex;
+  .main .main-preview{
+		float: none;
+		display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-		padding-top: -30px;
+		margin: 70px auto;
+		width: auto;
+
 
   }
 
@@ -575,23 +602,23 @@ a{
 		text-align: center;
 		flex-grow: 1; /* 增加伸縮比例所佔用空間 */
 		white-space: nowrap;
-		margin: 0 auto;
+		margin: 20px auto;
   }
 
   .main-preview .title {
 		display: flex;
-		flex: 0.5;
+		flex: 1;
     text-align: center;
-    margin: 40px auto;
+    margin: 20px auto;
   }
 
   .main-preview .descript {
 		display: flex;
     justify-content: center;
     text-align: justify;
-		margin: 0 auto;
-		min-width: 60vh;
-		margin-bottom: -20px;
+		margin: 20px auto;
+		/* min-width: 60vh; */
+		max-height: 50%;
   }
 }
 
@@ -600,7 +627,7 @@ a{
 	padding: 60px ;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
 	.front_end_skill_main .container{
 		padding: 24px ;
 		display: flex;
@@ -620,7 +647,7 @@ a{
 	border-bottom: 2px solid #333;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
 	.front_end_skill_main .hero{
 		height: 140px;
 		width: 100%;
@@ -649,7 +676,7 @@ a{
 	padding-right: 60px;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1080px) {
 	.front_end_skill_main .front_end_title{
     display: flex;
     justify-content: center;
@@ -739,7 +766,7 @@ clear: both;
 	padding-right: 60px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
 
 	.headline-box-group{
 		/* 將那些選項至於中央 */
@@ -812,7 +839,7 @@ clear: both;
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   .back-text-group {
     margin-left: 100px; /* 在較小的螢幕上縮小距離 */
   }
@@ -973,7 +1000,7 @@ clear: both;
 	align-items: flex-end;
 
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   .klienti_group {
     padding-left: 0; /* 移除左邊間距 */
     display: flex;
@@ -1109,7 +1136,7 @@ clear: both;
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   .contact-text-group {
     margin-left: 100px; /* 在較小的螢幕上縮小距離 */
   }
@@ -1238,7 +1265,7 @@ clear: both;
 	border-top: 2px solid #444;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1080px) {
 	.footer .container {
 		margin: 0 10px;
 		display: block;
@@ -1270,7 +1297,7 @@ clear: both;
   line-height: 35px;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1080px) {
   .footer .nav-item,
 	.footer {
     display: flex;
