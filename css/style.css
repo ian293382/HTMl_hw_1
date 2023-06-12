@@ -65,9 +65,8 @@ a{
 .main .container{
 	max-width: 1980px;
 	width: 100%;
-	height: 924px;
+	/* height: 924px; */
 	max-height: 1080px;
-	margin-top: 100% ;
 	margin: 0 auto;
 	padding-left: 60px;
 	padding-right: 60px;
@@ -79,6 +78,7 @@ a{
 		padding-left: 24px;
 		padding-right: 24px;
 		width: 100vh;
+
 	}
 	.main .container{
 		padding-left: 10px;
@@ -502,8 +502,9 @@ a{
 	background-color: #222;
 	display: flex;
 	flex-direction: column;
-	flex-grow: 1; /*可佔滿垂直剩餘的空間*/
-	min-height: 100vh;
+/*可佔滿垂直剩餘的空間*/
+flex-grow: 0.5;
+
 }
 
 .main{
@@ -572,7 +573,7 @@ a{
 		display: inline-flex;
 		flex-direction: column;
     width:100%;
-		flex-basis: 100%;
+		padding-bottom: 40%;
 	}
 
 	.image-container .image{
@@ -948,7 +949,7 @@ clear: both;
 }
 
 .portfolio_main{
-	min-height: 100vh;
+	min-height: 100%;
 
 	overflow-x: hidden;
 }
