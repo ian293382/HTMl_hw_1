@@ -264,14 +264,14 @@ a{
     width: auto;
 		/* 水平中央 */
     margin: auto 0 ;
-    margin-top: -30px;
+    margin-top: -10px;
   }
 
   .btn-group-center .btn {
     text-align: center;
     margin-left: 12px;
     margin-right: 12px;
-    margin-bottom: 24px;
+    margin-bottom: 0;
     margin-top: 24px;
     flex: 0 0 calc(50% - 24px);
   }
@@ -1275,6 +1275,8 @@ clear: both;
 		display: block;
 		border-top: 2px solid #444;
 		width: 100vh;
+		height: 100%;
+		overflow: hidden;
   }
 }
 
@@ -1313,6 +1315,9 @@ clear: both;
 		width: 100%;
 		margin: 0 auto;
 		align-content: center;
+
+		height: 100%;
+		overflow: hidden;
 
   }
 }
