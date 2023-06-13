@@ -1257,7 +1257,6 @@ clear: both;
 	/* 固定在最下方; */
 	flex-shrink: 0;
 	background-color: #222;
-	padding: 20px;
 	color: #fff;
 }
 
@@ -1275,7 +1274,7 @@ clear: both;
 		margin: 0 10px;
 		display: block;
 		border-top: 2px solid #444;
-		width: 80vh;
+		width: 100vh;
   }
 }
 
@@ -1300,7 +1299,6 @@ clear: both;
 	font-size: 16px;
   font-weight: 400;
   line-height: 35px;
-	padding-top: 0;
 }
 
 @media screen and (max-width:1080px) {
@@ -1312,8 +1310,9 @@ clear: both;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-		width:100%;
+		width: 100%;
 		margin: 0 auto;
 		align-content: center;
+
   }
 }
