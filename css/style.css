@@ -1533,7 +1533,7 @@ clear: both;
 	color: #555;
 }
 
-.form_item-lg input[type="text"] {
+.form_item-lg textarea {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -1546,7 +1546,7 @@ clear: both;
   font-size: 14px;
   writing-mode: horizontal-tb !important;
   text-align: start;
-  white-space: pre-wrap;
+  /* white-space: pre-wrap; */
 }
 
 
