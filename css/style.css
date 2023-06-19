@@ -179,12 +179,13 @@ a{
 }
 
 /* contact_row_grid for contact*/
-.container .col-60 {
+.container .form_grid {
   display: flex;
   flex-direction: column;
-  width: 60%;
-  padding-left: 6.66666%;
+  padding-left: 0;
+	margin: 0 auto;
 }
+
 
 .contact_row {
   grid-gap: 20px;
@@ -213,6 +214,37 @@ a{
   grid-column: 2 / span 2;
   grid-row: 1 / span 3;
 }
+
+@media screen and (max-width: 768px) {
+	.contact_row{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-content: center;
+		align-items: center;
+		justify-content: flex-start;
+
+		gap: 0;
+		grid-template-columns: 0;
+		grid-template-rows: 0;
+		margin-bottom: 0;
+		width: 100%;
+	}
+
+	.contact_row_grid_1,
+	.contact_row_grid_4 {
+	display: flex;
+	width: 100%;
+	grid-column: 0;
+  grid-row: 0;
+	}
+
+	.input_group.form_item-lg{
+		grid-column: 0;
+  	grid-row: 0;
+	}
+}
+
 /* component */
 .main-preview .name_title{
 	color: rgba(255, 255, 255, 0.5);
@@ -512,6 +544,7 @@ a{
 
 .main{
 	flex: 1;
+	display: flex;
 }
 
 .main .container{
@@ -655,11 +688,9 @@ a{
 @media screen and (max-width: 1080px) {
 	.front_end_skill_main .hero{
 		height: 140px;
-		width: 100%;
 		display: flex;
     justify-content: center;
     text-align: justify;
-		margin: 0 auto;
 		margin-bottom: 0;
 
   }
@@ -667,10 +698,23 @@ a{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		width: 100%;
+		flex-wrap: wrap;
+    margin: 0 auto;
+	}
+
+}
+@media screen and (max-width: 768px) {
+	.front_end_skill_main .hero{
+		margin-top: 120px;
+
 	}
 }
-
+@media screen and (max-width: 540px) {
+	.front_end_skill_main .hero{
+		height: 80px;
+		margin-top: 120px;
+	}
+}
 
 .front_end_skill_main .front_end_title{
 	color: #fff;
@@ -689,6 +733,15 @@ a{
 		align-items: center;
 		margin: 0 auto;
 		padding-right: 0;
+	}
+}
+@media screen and (max-width: 1080px) {
+
+	.front_end_skill_main .front_end_title{
+
+		font-size: 35px;
+		font-weight: 700;
+		line-height: 25px;
 	}
 }
 
@@ -1119,6 +1172,7 @@ clear: both;
 		margin-top: -20px;
 		}
 }
+
 .portfolio_main .hero{
 	height: 231px;
 	width: 100%;
@@ -1333,7 +1387,6 @@ clear: both;
 	.galerie_list{
 		/* 水平排列 */
 		display: flex;
-
 	}
 
 	.portfolio_wrapper .galerie_list .galerie-item{
@@ -1423,13 +1476,53 @@ clear: both;
 	line-height: 35px;
 	padding-left: 60px;
 }
+
+@media screen and (max-width: 1080px) {
+	.wrapper{
+		flex-wrap: wrap;
+	}
+
+	.contact_main .container{
+		/* 與上方logo對準60px */
+		padding-left: 30px ;
+	}
+
+	.contact_main .row{
+		display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+	}
+
+	.contact_main .hero{
+		height: 120px;
+		width: 100%;
+		justify-content: center;
+	}
+
+	.contact_main .contact_title{
+		color: #fff;
+		margin: 0;
+		padding-left: 0;
+	}
+
+}
+
+@media screen and (max-width: 540px) {
+	.contact_main .container{
+		/* 與上方logo對準60px */
+		padding-left: 10px;
+	}
+
+}
+
 .contact_map {
+
   top: 0;
   left: 0;
 	margin-top: 29px;
   padding: 29px 121px;
-  width: 1678px;
-  height: 146px;
+  width: 100%;
+  height: 120px;
   background-size: cover;
 	display: flex;
   align-items: center;
@@ -1437,6 +1530,26 @@ clear: both;
   overflow: hidden;
 
 	margin-bottom: 39px;
+}
+
+
+@media screen and (max-width: 1080px) {
+
+	.contact_map {
+
+		top: 0;
+		left: 0;
+		margin-top: 29px;
+		padding: 0;
+		/* s */
+		height: 60%;
+		background-size: cover;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+
+		margin-bottom: 39px;
+	}
 }
 
 .contact-wrapper{
@@ -1458,9 +1571,10 @@ clear: both;
 
 }
 
+
 @media screen and (max-width: 1080px) {
   .contact-text-group {
-    margin-left: 100px; /* 在較小的螢幕上縮小距離 */
+    margin: 0 auto;
   }
 }
 
@@ -1502,6 +1616,28 @@ clear: both;
 	/* display: block; */
 }
 
+
+@media screen and (max-width: 1080px ) {
+	.contact_main {
+		margin-top: 0;
+		}
+}
+
+@media screen and (max-width: 768px ) {
+	.contact_main {
+		margin-top: 120px;
+		}
+	.input_group{
+		width:100%
+	}
+
+	.contact-wrapper .contact-text-group {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+
 .input_group{
 	display: flex;
 	margin-top: 27px;
@@ -1516,7 +1652,6 @@ clear: both;
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1; /*可佔滿垂直剩餘的空間*/
-	min-height: 100vh;
 }
 
 .form_item input,
@@ -1567,6 +1702,14 @@ clear: both;
 	cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+	.contact_row .btn-md-center{
+		justify-content: center;
+		margin-bottom: 20px;
+		margin-top: 10px;
+	}
+}
+
 /* footer */
 .footer{
 	align-items: center;
@@ -1585,14 +1728,18 @@ clear: both;
 	border-top: 2px solid #444;
 }
 
-@media screen and (max-width:1080px) {
-	.footer .container {
-		margin: 0 10px;
-		display: block;
-		border-top: 2px solid #444;
-		width: 100vh;
-		height: 100%;
+@media screen and (max-width: 1080px) {
+  .footer .container {
+		margin: 0 ;
+    display: flex;
+		flex-direction: column;
+
+    justify-content: center;
+    border-top: 2px solid #444;
+    width: 100vh;
+    height: auto;
 		overflow: hidden;
+
   }
 }
 
@@ -1619,21 +1766,23 @@ clear: both;
   line-height: 35px;
 }
 
-@media screen and (max-width:1080px) {
+@media screen and (max-width: 1080px) {
+  .footer .nav-item .nav-list {
+    float: none;
+  }
   .footer .nav-item,
-	.footer {
+  .footer {
     display: flex;
-		flex-direction: column;
-		flex: 1;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-		width: 100%;
-		margin: 0 auto;
-		align-content: center;
-
-		height: 100%;
-		overflow: hidden;
-
+    flex-wrap: nowrap;
+    /* width: 100%; */
+    height: auto;
+		float: none;
+		clear: both;
+    /* overflow: hidden; */
   }
 }
+
+
